@@ -1,24 +1,26 @@
 import './App.css';
-import { API } from './api';
+import TeaserList from './components/TeaserList/TeaserList';
+import DataLoader from './components/DataLoader/DataLoader';
+import { ACTIONS } from './api/actions';
 
 function App() {
-  const api = new API();
-  api.init();
   return (
     <div className="App">
       <header className="App-header">
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <span>
           AEM Headless Demo
-        </a>
+        </span>
       </header>
-      <div>
-      
-      </div>
+      <main>
+        <DataLoader action={ACTIONS.fetchItems}>
+          <TeaserList />
+        </DataLoader>
+      </main>
+      <footer className="App-footer">
+        <span>
+          2023
+        </span>
+      </footer>
     </div>
   );
 }
