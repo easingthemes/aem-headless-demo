@@ -9,8 +9,10 @@ function Teaser({ item, openArticle }) {
       <img src={`http://localhost:4502${item.primaryImage._path}/jcr:content/renditions/cq5dam.thumbnail.319.319.png`}
            alt={item.title}
            onClick={() => openArticle(item._path, el)}/>
-      <h2>{item.title}</h2>
-      <span>{item.activity}</span>
+      <div className="teaser__content">
+        <h2>{item.title}</h2>
+        <span>{item.activity}</span>
+      </div>
     </div>
   );
 }

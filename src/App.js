@@ -23,8 +23,12 @@ function App() {
   
   const closeArticle = () => {
     document.startViewTransition(() => {
-      setActiveArticle(null)
+      setActiveArticle(null);
+      activeElement.current.classList.add('teaser--active');
       activeElement.current.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        activeElement.current.classList.remove('teaser--active');
+      }, 2000);
     });
   }
   
@@ -34,8 +38,9 @@ function App() {
     });
   }
 
+  const modalClass = activeArticle ? 'App--modal' : '';
   return (
-    <div className="App">
+    <div className={`App ${modalClass}`}>
       <header className="App-header">
         <span>AEM Headless Demo</span>
       </header>
@@ -54,6 +59,7 @@ function App() {
       <footer className="App-footer">
         <span>Dragan Filipovic 2023</span>
       </footer>
+      <div className="modal__bg" onClick={closeArticle}></div>
     </div>
   );
 }

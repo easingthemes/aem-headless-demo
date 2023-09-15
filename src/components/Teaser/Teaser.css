@@ -4,6 +4,23 @@
     flex-direction: column;
 }
 
+.teaser:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.teaser--active {
+    animation: flick 2s;
+}
+
+@keyframes flick {
+    0%   {background: rgba(0,0,0,0.05)}
+    20%   {background: rgba(0,0,0,0)}
+    40%   {background: rgba(0,0,0,0.05)}
+    60%   {background: rgba(0,0,0,0)}
+    80%   {background: rgba(0,0,0,0.05)}
+    100% {background: rgba(0,0,0,0)}
+}
+
 .teaser img {
     object-fit: cover;
     width: 100%;
@@ -11,8 +28,15 @@
     cursor: pointer;
 }
 
+.teaser__content {
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .teaser h2 {
-    margin: 10px 0;
+    margin: 0 0 10px;
 }
 
 .teaser span {
