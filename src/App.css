@@ -9,3 +9,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+main {
+  max-width: 1024px;
+  margin: 40px auto 20px;
+}

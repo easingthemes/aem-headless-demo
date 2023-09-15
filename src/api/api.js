@@ -1,6 +1,5 @@
 import { AEMHeadless } from '@adobe/aem-headless-client-js';
-import { adventureList, priceFilter } from './queries';
-import { ACTIONS } from './actions';
+import { adventureList } from './queries';
 
 export class API {
   constructor() {
@@ -11,11 +10,11 @@ export class API {
     });
   }
   
-  async [ACTIONS.fetchItems]() {
+  async fetchItems({ variables }) {
     try {
-      const res = await this.client.runQuery(adventureList);
+      const response = await this.client.runQuery(adventureList);
       return {
-        data: res.data.adventureList.items
+        data: response.data.adventureList.items
       };
     } catch (e) {
       return {
@@ -24,7 +23,61 @@ export class API {
     }
   }
   
-  async [ACTIONS.filterPrice]() {
-    return this.client.runQuery(priceFilter);
+  async fetchCachedItems({ variables }) {
+    try {
+      const response = await this.client.runPersistedQuery('wknd-shared/adventures-all', variables);
+      return {
+        data: response.data.adventureList.items
+      };
+    } catch (e) {
+      return {
+        error: e.toJSON()
+      }
+    }
+  }
+  
+  async fetchItemsForModel({ model, filter, variables }) {
+    let args = {};
+    if (filter && Object.keys(filter).length > 0) {
+      args = {
+        filter: {}
+      };
+      Object.entries(filter).forEach(([key, value]) => {
+        args.filter[key] = {_expressions: [{value}]}
+      });
+    }
+    
+    const { query } = this.client.buildQuery(model.name, model.fields, {
+      useLimitOffset: true,
+      pageSize: 100
+    }, args);
+    const { data, error } = await this.runQuery(query, variables);
+    return { data: data?.[`${model.name}List`]?.items, error };
+  }
+  
+  async runQuery(query, variables = {}) {
+    let body;
+    if (typeof query === 'string') {
+      body = {
+        query,
+        variables
+      }
+    } else {
+      body = {
+        query: query.query,
+        variables: query.variables ? { ...query.variables, ...variables } : variables
+      }
+    }
+    
+    try {
+      const response = await this.client.runQuery(body);
+      return {
+        data: response.data
+      };
+    } catch (e) {
+      return {
+        error: e.toJSON()
+      }
+    }
   }
 }
