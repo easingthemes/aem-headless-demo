@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { API } from '../../api/api';
+import { Loading } from '../Loading/Loading';
 
-function DataLoader({ action, variables, model, filter, children }) {
+function DataLoader({ action, variables, model, _path, filter, children }) {
   const api = useMemo(() => new API(), []);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -19,8 +20,13 @@ function DataLoader({ action, variables, model, filter, children }) {
       return;
     }
     
+    if (_path === null) {
+      setData({});
+      return;
+    }
+    
     (async () => {
-      const { data, error } = await api[apiAction]({ model, filter, variables });
+      const { data, error } = await api[apiAction]({ model, _path, filter, variables });
       if (error) {
         setError(error);
       }
@@ -29,14 +35,14 @@ function DataLoader({ action, variables, model, filter, children }) {
         setData(data);
       }
     })();
-  }, [api, action, variables, model, filter]);
+  }, [api, action, variables, model, _path, filter]);
   
   if (error) {
     return <div>Error { error.message }</div>;
   }
   
   if (!data) {
-    return <div>...Loading...</div>;
+    return <Loading label="results"/>;
   }
   
   return React.Children.map(children, (child) => {

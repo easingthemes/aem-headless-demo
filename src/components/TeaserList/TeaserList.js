@@ -1,11 +1,11 @@
 import Teaser from '../Teaser/Teaser';
 import './TeaserList.css';
 
-function TeaserList({ data }) {
+function TeaserList({ data, openArticle }) {
   const teasers = data.map((item, i) => {
     return (
       <li key={`teaser-${i}`} className="teaser-list__item">
-        <Teaser item={item} />
+        <Teaser item={item} openArticle={openArticle} />
       </li>
     );
   });

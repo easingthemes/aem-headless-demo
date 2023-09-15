@@ -1,0 +1,30 @@
+.dot__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.dot__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 32px 0;
+  overflow: hidden;
+  margin: 10px auto;
+  max-width: 400px;
+  width: 100%;
+  text-align: initial;
+}
+
+.dot__label {
+  margin: 10px auto;
+}
+
+/**
+MIT License
+Copyright (c) 2018 Zongbin
+*/
+.dot-pulse,.dot-pulse::after,.dot-pulse::before{width:10px;height:10px;border-radius:5px;background-color:#000;color:#000}.dot-pulse{position:relative;left:-9999px;box-shadow:9999px 0 0 -5px;animation:1.5s linear .25s infinite dot-pulse}.dot-pulse::after,.dot-pulse::before{content:"";display:inline-block;position:absolute;top:0}.dot-pulse::before{box-shadow:9984px 0 0 -5px;animation:1.5s linear infinite dot-pulse-before}.dot-pulse::after{box-shadow:10014px 0 0 -5px;animation:1.5s linear .5s infinite dot-pulse-after}@keyframes dot-pulse-before{0%,100%,60%{box-shadow:9984px 0 0 -5px}30%{box-shadow:9984px 0 0 2px}}@keyframes dot-pulse{0%,100%,60%{box-shadow:9999px 0 0 -5px}30%{box-shadow:9999px 0 0 2px}}@keyframes dot-pulse-after{0%,100%,60%{box-shadow:10014px 0 0 -5px}30%{box-shadow:10014px 0 0 2px}}

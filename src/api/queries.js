@@ -4,7 +4,24 @@ export const MODELS = {
     fields: `{
       title
       activity
-      price
+      _path
+      primaryImage {
+        ... on ImageRef {
+          _path
+        }
+      }
+    }`
+  },
+  article: {
+    name: 'adventure',
+    fields: `{
+      title
+      description {
+        html
+      }
+      itinerary {
+        html
+      }
       primaryImage {
         ... on ImageRef {
           _path
@@ -46,3 +63,26 @@ export const adventureList = {
     imageWidth: 400
   }
 };
+
+export const itemByPath = `
+  query getItemByPath($itemPath: String!) {
+    adventureByPath(_path: $itemPath) {
+      item {
+        title
+        slug
+        description {
+          html
+        }
+        activity
+        primaryImage {
+          ... on ImageRef {
+            _path
+          }
+        }
+        itinerary {
+          html
+        }
+      }
+    }
+  }
+`;
