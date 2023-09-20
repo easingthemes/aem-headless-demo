@@ -37,7 +37,7 @@ function App() {
       setActiveItem(activity);
     });
   }
-
+  
   const modalClass = activeArticle ? 'App--modal' : '';
   return (
     <div className={`App ${modalClass}`}>
@@ -46,7 +46,7 @@ function App() {
       </header>
       <main ref={mainEl}>
         <h1>{MODELS.adventure.name}</h1>
-        <DataLoader action="fetchCachedItems">
+        <DataLoader model={MODELS.activities}>
           <Filters setActiveItem={updateActiveItem} activeItem={activeItem} />
         </DataLoader>
         <DataLoader model={MODELS.adventure} filter={filter}>
