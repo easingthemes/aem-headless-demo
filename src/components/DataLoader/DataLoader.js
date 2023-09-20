@@ -1,41 +1,65 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { API } from '../../api/api';
 import { Loading } from '../Loading/Loading';
 
-function DataLoader({ action, variables, model, _path, filter, children }) {
+function DataLoader({ model, _path, filter, variables, children }) {
   const api = useMemo(() => new API(), []);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+  const [isDone, setIsDone] = useState(false);
+  const cursorQuery = useRef(null);
+  
+  const loadMore = () => {
+    cursorQuery.current.next()
+      .then(({ done, value }) => {
+        if (!done) {
+          setData([...(data || []), ...value]);
+        } else {
+          setIsDone(true);
+        }
+      })
+      .catch((e) => {
+        setError(e);
+      })
+  }
   
   useEffect(() => {
-    const apiAction = model ? 'fetchItemsForModel' : action;
-    
-    if (!apiAction) {
-      setError(new Error('API action missing!'));
-      return;
-    }
+    const apiAction = 'fetchItemsForModel';
+    const isPaginated = model.config && model.config.pageSize;
     
     if (typeof api[apiAction] !== 'function') {
       setError(new Error('API action is not defined!'));
       return;
     }
     
+    // _path is defined
     if (_path === null) {
       setData({});
       return;
     }
     
     (async () => {
-      const { data, error } = await api[apiAction]({ model, _path, filter, variables });
-      if (error) {
-        setError(error);
+      if (isPaginated) {
+        cursorQuery.current = await api.initPaginatedQuery(model);
+        loadMore();
+        return;
       }
       
-      if (data) {
-        setData(data);
+      const { data: apiData, error: apiError } = await api[apiAction]({ model, _path, filter, variables, cursorQuery: cursorQuery.current });
+
+      if (apiError) {
+        setError(apiError);
+      }
+      
+      if (apiData) {
+        if (isPaginated) {
+          setData(apiData);
+        } else {
+          setData(apiData);
+        }
       }
     })();
-  }, [api, action, variables, model, _path, filter]);
+  }, [api, model, _path, filter, variables]);
   
   if (error) {
     return <div>Error { error.message }</div>;
@@ -48,6 +72,8 @@ function DataLoader({ action, variables, model, _path, filter, children }) {
   return React.Children.map(children, (child) => {
     return React.cloneElement(child, {
       data,
+      loadMore,
+      isDone
     });
   });
 }

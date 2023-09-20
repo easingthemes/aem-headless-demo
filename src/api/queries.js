@@ -1,6 +1,13 @@
 export const MODELS = {
+  activities: {
+    name: 'adventure',
+    path: 'wknd-shared/activities'
+  },
   adventure: {
     name: 'adventure',
+    config: {
+      pageSize: 6
+    },
     fields: `{
       title
       activity
