@@ -21,9 +21,32 @@
   color: white;
 }
 
-main {
-  position: relative;
-  max-width: 1024px;
+/* --- Schedule Table --- */
+.schedule table {
   width: 100%;
-  margin: 40px auto 20px;
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  margin: 0;
+  padding: 0.5em;
+  vertical-align: top;
+  text-align: left;
+  color: var(--color-dark);
+}
+
+.schedule td {
+  border: 3px solid var(--color-light-gray);
+  background-color: var(--color-light);
+}
+
+.schedule td:first-child {
+  border-left: none;
+  width: 80px;
+}
+
+.schedule td:last-child {
+  border-right: none;
+  width: 25%;
 }

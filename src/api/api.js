@@ -7,7 +7,9 @@ export class API {
     this.client = new AEMHeadless(API_CONFIG);
     const isPaginated = model.config && model.config.pageSize;
     if (isPaginated) {
-      this.paginated = this.client.runPaginatedQuery(model.name, model.fields, model.config);
+      this.paginated = this.client.runPaginatedQuery(model.name, model.fields, model.config, {
+        sort: "scheduledAt"
+      });
     }
   }
   
@@ -43,7 +45,7 @@ export class API {
       //
       const { data } = await this.client.runQuery({ query, variables });
       return {
-        data: data.adventureList.items
+        data: data.sessionsList.items
       };
     } catch (e) {
       return {

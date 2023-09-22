@@ -1,20 +1,20 @@
-import { useRef } from 'react';
-import { API_CONFIG } from '../../api/config';
 import './Teaser.css';
+import { Link } from 'react-router-dom';
 
-function Teaser({ item, openArticle }) {
-  const el = useRef(null);
-  
+function Teaser({ item, isPaginated }) {
+  const date = new Date(item.scheduledAt);
+  const day = date.toLocaleDateString('de-DE');
+  const time = date.toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'});
+  const Day = isPaginated ? <small>{day}</small> : '';
+  const ItemLink = item.speaker ? <Link to={`page${item._path}`}>{item.name}</Link> : item.name;
   return (
-    <div className="teaser" ref={el}>
-      <img src={`${API_CONFIG.serviceURL}${item.primaryImage._path}/jcr:content/renditions/cq5dam.thumbnail.319.319.png`}
-           alt={item.title}
-           onClick={() => openArticle(item._path, el)}/>
-      <div className="teaser__content">
-        <h2>{item.title}</h2>
-        <span>{item.activity}</span>
-      </div>
-    </div>
+    <tr className="table__row">
+      <td className="table__cell">{time} {Day}</td>
+      <td className="table__cell">
+        {ItemLink}
+      </td>
+      <td className="table__cell">{item.speaker}</td>
+    </tr>
   );
 }
 

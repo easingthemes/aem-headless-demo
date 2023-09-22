@@ -1,24 +1,20 @@
 import './Filters.css';
 
 function Filters({ data, activeItem, updateActiveItem }) {
-  const activities = [...new Set(data.map(({ activity }) => activity))];
-  const filters = activities.map((activity, i) => {
-    const isActive = activeItem === activity;
+  const days = [...new Set(data.map(({ scheduledAt }) => {
+    return scheduledAt.split('T')[0];
+  }))];
+  const filters = days.map((day, i) => {
+    const isActive = activeItem === day;
     return (
-      <li key={`filter-${i}`} className="filters__item">
-        <button onClick={() => updateActiveItem(activity)} disabled={isActive}>{activity}</button>
-      </li>
+      <button key={i} onClick={() => updateActiveItem(day)} disabled={isActive}>Day {i + 1}</button>
     );
   });
 
   return (
     <div className="filters">
-      <ul className="filters__items">
-        <li key={`filter-all`} className="filters__item">
-          <button onClick={() => updateActiveItem(undefined)} disabled={!activeItem}>All</button>
-        </li>
-        {filters}
-      </ul>
+      <button onClick={() => updateActiveItem(undefined)} disabled={!activeItem}>All</button>
+      {filters}
     </div>
   );
 }

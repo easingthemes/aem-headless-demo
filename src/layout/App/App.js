@@ -7,6 +7,7 @@ import { API } from '../../api/api';
 import Home from '../../pages/Home/Home';
 import Page from '../../pages/Page/Page';
 import './App.css';
+import Header from './Header';
 
 const getRouter = (api) => {
   return createHashRouter([
@@ -33,9 +34,7 @@ function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
-        <a href="/">AEM Headless Demo</a>
-      </header>
+      <Header />
       <RouterProvider router={router} />
       <footer className="App-footer">
         <span>Dragan Filipovic 2023</span>

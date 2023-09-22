@@ -1,29 +1,28 @@
+/* --- Tab Navigation --- */
 .filters {
-   padding: 10px 0;
-}
-
-.filters ul {
-    margin: 0;
-    padding: 0;
-}
-
-.filters li {
-    list-style: none;
-}
-
-.filters__items {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+    display: block;
+    margin-left: 1.5em;
+    z-index: 1;
+    left: 1em;
+    top: 0;
 }
 
 .filters button {
-    color: #202020;
-    background: none;
+    color: var(--color-cta);
+    font-family: var(--font-semi);
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-align: center;
+    background-color: var(--color-light-gray);
+    border: 2px solid var(--color-light-gray);
+    margin-right: 2px;
+    margin-bottom: -2px;
+    outline: none;
+    border-radius: 0.5em 0.5em 0 0;
 }
+
 .filters button[disabled],
 .filters button:hover {
-    opacity: 1;
-    background-color: #ffea00;
+    background-color: var(--color-light);
+    border-bottom: 2px solid var(--color-light);
 }

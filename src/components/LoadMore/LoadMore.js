@@ -2,7 +2,7 @@ import './LoadMore.css';
 
 function LoadMore({ loadMore, hasMore }) {
   return (
-    <button onClick={() => loadMore()} disabled={!hasMore}>Load More</button>
+    <button className="load-more" onClick={() => loadMore()} disabled={!hasMore}>Load More</button>
   );
 }
 

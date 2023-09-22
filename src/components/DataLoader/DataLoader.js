@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { API } from '../../api/api';
 import Loading from '../Loading/Loading';
 
-function DataLoader({ model, _path, filterVal, variables, children }) {
+function DataLoader({ model, _path, variables, children }) {
   const api = useMemo(() => new API(model), [model]);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -22,7 +22,7 @@ function DataLoader({ model, _path, filterVal, variables, children }) {
       } else if (isPaginated) {
         result = await api.fetchPaginated()
       } else {
-        result = await api.fetchList(model, { filterVal });
+        result = await api.fetchList(model, variables);
       }
 
       const { data, error, hasNext } = result;
@@ -38,7 +38,7 @@ function DataLoader({ model, _path, filterVal, variables, children }) {
     return () => {
       isMounted = false
     }
-  }, [api, model, _path, filterVal, variables]);
+  }, [api, model, _path, variables]);
   
   if (error) {
     return <div>Error { error.message }</div>;

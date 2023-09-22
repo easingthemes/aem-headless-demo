@@ -1,51 +1,46 @@
 export const MODELS = {
   filters: {
-    name: 'adventure',
-    path: 'wknd-shared/activities'
+    name: 'sessions',
+    path: 'adapto/filter-by-day'
   },
   items: {
-    name: 'adventure',
+    name: 'sessions',
     fields: `{
-      title
-      activity
+      scheduledAt
+      name
+      speaker
       _path
-      primaryImage {
-        ... on ImageRef {
-          _path
-        }
-      }
     }`
   },
   item: {
-    name: 'adventure',
+    name: 'sessions',
     fields: `{
-      title
+      name
       description {
         html
       }
-      itinerary {
-        html
-      }
-      primaryImage {
-        ... on ImageRef {
-          _path
-        }
-      }
+      scheduledAt
+      speaker
+      _path
     }`
   },
-  query: `query ($filterVal: String) {
-    adventureList(
-      filter: {activity: {_expressions: [{value: $filterVal}]}}
-      ) {
-      items {
-        title
-        activity
-        _path
-        primaryImage {
-          ... on ImageRef {
-            _path
-          }
+  query: `query ($before: Calendar, $after: Calendar) {
+    sessionsList(
+      sort: "scheduledAt"
+      filter: {
+        scheduledAt: {
+          _expressions: [
+            {value: $before, _operator: BEFORE}
+            {value: $after, _operator: AFTER}
+          ]
         }
+      }
+    ) {
+      items {
+        scheduledAt
+        name
+        speaker
+        _path
       }
     }
   }`
