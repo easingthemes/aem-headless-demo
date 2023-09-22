@@ -16,20 +16,9 @@
   color: white;
 }
 
-.App--modal {
-  position: relative;
-}
-
-.App--modal .modal__bg {
-  display: block;
-  position: absolute;
-  background: #000;
-  opacity: 0.5;
-  inset: 0;
-}
-
-.modal__bg {
-  display: none;
+.App-header a {
+  text-decoration: none;
+  color: white;
 }
 
 main {

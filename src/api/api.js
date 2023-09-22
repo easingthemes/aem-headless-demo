@@ -1,96 +1,35 @@
 import { AEMHeadless } from '@adobe/aem-headless-client-js';
 import { API_CONFIG } from './config';
+import { MODELS } from './queries';
 
 export class API {
-  constructor() {
+  constructor(model = {}) {
     this.client = new AEMHeadless(API_CONFIG);
-  }
-  
-  async initPaginatedQuery(model) {
-    return this.client.runPaginatedQuery(model.name, model.fields, model.config);
-  }
-  
-  setFilters(filter) {
-    if (!filter || Object.keys(filter).length === 0) {
-      return null;
+    const isPaginated = model.config && model.config.pageSize;
+    if (isPaginated) {
+      this.paginated = this.client.runPaginatedQuery(model.name, model.fields, model.config);
     }
-    const filters = {};
-    Object.entries(filter).forEach(([key, value]) => {
-      filters[key] = {_expressions: [{value}]}
-    });
-    return filters;
   }
   
-  getBody(query, variables) {
-    if (typeof query === 'string') {
+  // ByPath
+  async fetchByPath(_path) {
+    const { item } = MODELS;
+
+    try {
+      const { data } = await this.client.runModelQuery(item.name, item.fields, {}, { _path });
+      return { data };
+    } catch (e) {
       return {
-        query,
-        variables
+        error: e.toJSON()
       }
     }
-    
-    return {
-      query: query.query,
-      variables: query.variables ? { ...query.variables, ...variables } : variables
-    }
   }
-  
-  async fetchItemsForModel({ model, _path, filter, variables, cursorQuery }) {
-    const filters = this.setFilters(filter);
-    const args = {};
-
-    if (filters) {
-      args.filter = filters;
-    }
-    
-    if (_path) {
-      args._path = _path;
-    }
-
-    const { data, error, type } = await this.fetchData(model, args, variables, cursorQuery);
-    const list = this.getItems(data, model.name, type);
-
-    return { data: list, error };
-  }
-  
-  getItems(data, name, type) {
-    const list = data?.[`${name}${type}`];
-    switch (type) {
-      case 'Paginated':
-        return data
-      case 'ByPath':
-        return list?.item
-      default:
-        return list?.items
-    }
-  }
-  
-  async fetchData(model, args, variables, cursorQuery) {
-    if (model.path) {
-      const { data, error } = await this.runPersistedQuery(model.path, variables);
-      return { data, error, type: model.type || 'List' };
-    }
-    const config = model.config || {
-      useLimitOffset: true
-    };
-    const { query, type } = this.client.buildQuery(model.name, model.fields, config, args);
-
-    if (type === 'Paginated') {
-      const { data, error } = await this.runPaginatedQuery(cursorQuery);
-      return { data, error, type };
-    }
-    
-    const { data, error } = await this.runQuery(query, variables);
-    return { data, error, type };
-  }
-  
-  async runQuery(query, variables = {}) {
-    const body = this.getBody(query, variables);
-    
+  // Persisted
+  async fetchCached({ model, variables }) {
     try {
-      const response = await this.client.runQuery(body);
+      const { data } = await this.client.runPersistedQuery(model.path, variables);
       return {
-        data: response.data
+        data: data[`${model.name}List`].items
       };
     } catch (e) {
       return {
@@ -98,12 +37,13 @@ export class API {
       }
     }
   }
-  
-  async runPersistedQuery(path, variables) {
+  // List
+  async fetchList(query, variables) {
     try {
-      const response = await this.client.runPersistedQuery(path, variables);
+      //
+      const { data } = await this.client.runQuery({ query, variables });
       return {
-        data: response.data
+        data: data.adventureList.items
       };
     } catch (e) {
       return {
@@ -111,12 +51,13 @@ export class API {
       }
     }
   }
-  
-  async runPaginatedQuery(cursorQuery) {
+  // Paginated
+  async fetchPaginated() {
     try {
-      const { done, value } = await cursorQuery.next();
+      const { value = {} } = await this.paginated.next();
       return {
-        data: value
+        data: value.data,
+        hasNext: value.hasNext,
       };
     } catch (e) {
       return {

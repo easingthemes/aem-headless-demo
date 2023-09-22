@@ -1,11 +1,6 @@
 import './Filters.css';
 
-function Filters({ data, activeItem, setActiveItem }) {
-  const updateActiveItem = (activity) => {
-    document.startViewTransition(() => {
-      setActiveItem(activity);
-    });
-  }
+function Filters({ data, activeItem, updateActiveItem }) {
   const activities = [...new Set(data.map(({ activity }) => activity))];
   const filters = activities.map((activity, i) => {
     const isActive = activeItem === activity;
@@ -20,7 +15,7 @@ function Filters({ data, activeItem, setActiveItem }) {
     <div className="filters">
       <ul className="filters__items">
         <li key={`filter-all`} className="filters__item">
-          <button onClick={() => updateActiveItem(null)} disabled={!activeItem}>All</button>
+          <button onClick={() => updateActiveItem(undefined)} disabled={!activeItem}>All</button>
         </li>
         {filters}
       </ul>

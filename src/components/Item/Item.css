@@ -1,0 +1,11 @@
+.article--empty {
+    display: none;
+}
+
+.article img {
+    width: 100%;
+}
+
+.article h2 {
+    margin: 10px 0;
+}

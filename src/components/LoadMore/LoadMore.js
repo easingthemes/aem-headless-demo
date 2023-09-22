@@ -1,8 +1,8 @@
 import './LoadMore.css';
 
-function LoadMore({ loadMore, isDone }) {
+function LoadMore({ loadMore, hasMore }) {
   return (
-    <button onClick={() => loadMore()} disabled={isDone}>Load More</button>
+    <button onClick={() => loadMore()} disabled={!hasMore}>Load More</button>
   );
 }
 

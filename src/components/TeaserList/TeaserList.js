@@ -2,7 +2,7 @@ import Teaser from '../Teaser/Teaser';
 import './TeaserList.css';
 import LoadMore from '../LoadMore/LoadMore';
 
-function TeaserList({ data, openArticle, loadMore, isDone }) {
+function TeaserList({ data, openArticle, loadMore, hasMore }) {
   const teasers = data.map((item, i) => {
     return (
       <li key={`teaser-${i}`} className="teaser-list__item">
@@ -10,13 +10,13 @@ function TeaserList({ data, openArticle, loadMore, isDone }) {
       </li>
     );
   });
-  
+  const Button = typeof hasMore === 'boolean' ? <LoadMore loadMore={loadMore} hasMore={hasMore} /> : null;
   return (
     <div className="teaser-list">
       <ul className="teaser-list__items">
         {teasers}
       </ul>
-      <LoadMore loadMore={loadMore} isDone={isDone} />
+      {Button}
     </div>
   );
 }

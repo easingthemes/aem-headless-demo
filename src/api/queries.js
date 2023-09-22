@@ -1,13 +1,10 @@
 export const MODELS = {
-  activities: {
+  filters: {
     name: 'adventure',
     path: 'wknd-shared/activities'
   },
-  adventure: {
+  items: {
     name: 'adventure',
-    config: {
-      pageSize: 6
-    },
     fields: `{
       title
       activity
@@ -19,7 +16,7 @@ export const MODELS = {
       }
     }`
   },
-  article: {
+  item: {
     name: 'adventure',
     fields: `{
       title
@@ -35,61 +32,21 @@ export const MODELS = {
         }
       }
     }`
-  }
-}
-
-export const adventureList = {
-  query:   `query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  },
+  query: `query ($filterVal: String) {
     adventureList(
-      offset: $offset
-      limit: $limit
-      sort: $sort
-      _assetTransform: {
-        format: $imageFormat
-        width: $imageWidth
-        quality: $imageQuality
-        preferWebp: true
-    }) {
+      filter: {activity: {_expressions: [{value: $filterVal}]}}
+      ) {
       items {
+        title
+        activity
         _path
-        slug
-        title
-        activity
-        price
-        tripLength
-        primaryImage {
-          ... on ImageRef {
-            _path
-            _dynamicUrl
-          }
-        }
-      }
-    }
-  }`,
-  variables: {
-    imageWidth: 400
-  }
-};
-
-export const itemByPath = `
-  query getItemByPath($itemPath: String!) {
-    adventureByPath(_path: $itemPath) {
-      item {
-        title
-        slug
-        description {
-          html
-        }
-        activity
         primaryImage {
           ... on ImageRef {
             _path
           }
         }
-        itinerary {
-          html
-        }
       }
     }
-  }
-`;
+  }`
+}
