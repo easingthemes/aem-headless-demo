@@ -2,7 +2,7 @@ function Header () {
   return (
     <header className="header">
       <div className="header-container">
-        <a className="logo" href="/"></a>
+        <a className="logo" href="/">Logo</a>
         <div>
           <h1>adaptTo() 2023</h1>
           <h2>AEM Headless SDK Demo</h2>
