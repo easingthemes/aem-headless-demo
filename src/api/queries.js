@@ -1,7 +1,7 @@
 export const MODELS = {
   filters: {
     name: 'sessions',
-    path: 'adapto/filter-by-day'
+    path: 'adaptTo/filter-by-day'
   },
   items: {
     name: 'sessions',

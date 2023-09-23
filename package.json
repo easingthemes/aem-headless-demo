@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.1.0",
     "http-server": "^14.1.1"
   }
 }
