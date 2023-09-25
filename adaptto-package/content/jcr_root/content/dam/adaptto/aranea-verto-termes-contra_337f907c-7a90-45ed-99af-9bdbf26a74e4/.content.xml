@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="aranea-verto-termes-contra_337f907c-7a90-45ed-99af-9bdbf26a74e4"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Aranea verto termes contra."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Angustus clarus autem arx."
+                description_x0040_ContentType="text/html"
+                name="Aranea verto termes contra."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T13:55:00.000Z"
+                size="{Long}53"
+                speaker="Garry Gleichner"
+                techAudience="intermediate"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

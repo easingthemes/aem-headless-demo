@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="thorax-delinquo-voluptatum-subiungo-nesciunt-asporto-aggero_ffa8d03d-fa5c-4bae-9c1b-6b4f4d5242d0"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Thorax delinquo voluptatum subiungo nesciunt asporto aggero."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Explicabo provident admitto combibo eos quas tabernus turba paens decor.
+Celo absum cicuta quod maxime depromo alveus corporis.
+Ventito ustulo repellat benevolentia assentator casus praesentium textilis dignissimos advenio.
+Expedita tergiversatio venia balbus corrupti solutio suspendo.
+Triduana strenuus defendo decor cui comis pecto coepi antea ulciscor."
+                description_x0040_ContentType="text/html"
+                name="Thorax delinquo voluptatum subiungo nesciunt asporto aggero."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T07:40:00.000Z"
+                size="{Long}100"
+                speaker="Stacey Heidenreich"
+                techAudience="intermediate"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

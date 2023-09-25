@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="viridis-crastinus-trans-decimus-dens-curso-spes-calamitas_57c18f26-1481-4953-8cda-8db0ccc9abce"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Viridis crastinus trans decimus dens curso spes calamitas."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Stella casso cito aliquid tabella.
+Ascit vinum appono arbitro.
+Tutamen compono conatus aeger ager balbus comptus coerceo quas."
+                description_x0040_ContentType="text/html"
+                name="Viridis crastinus trans decimus dens curso spes calamitas."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T10:45:00.000Z"
+                size="{Long}36"
+                speaker="Archie Ryan"
+                techAudience="intermediate"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,99 +1,69 @@
 import { AEMHeadless } from '@adobe/aem-headless-client-js';
-import { adventureList } from './queries';
+import { API_CONFIG } from './config';
+import { MODELS } from './queries';
 
 export class API {
-  constructor() {
-    this.client = new AEMHeadless({
-      serviceURL: 'http://localhost:4502',
-      endpoint: '/content/_cq_graphql/wknd-shared/endpoint.json',
-      auth: ['admin', 'admin']
-    });
-  }
-  
-  async fetchItems({ variables }) {
-    try {
-      const response = await this.client.runQuery(adventureList);
-      return {
-        data: response.data.adventureList.items
-      };
-    } catch (e) {
-      return {
-        error: e.toJSON()
-      }
-    }
-  }
-  
-  async fetchItem({ variables }) {
-    try {
-      const response = await this.client.runQuery(adventureList);
-      return {
-        data: response.data.adventureList.items
-      };
-    } catch (e) {
-      return {
-        error: e.toJSON()
-      }
-    }
-  }
-  
-  async fetchCachedItems({ variables }) {
-    try {
-      const response = await this.client.runPersistedQuery('wknd-shared/activities', variables);
-      return {
-        data: response.data.adventureList.items
-      };
-    } catch (e) {
-      return {
-        error: e.toJSON()
-      }
-    }
-  }
-  
-  async fetchItemsForModel({ model, _path, filter, variables }) {
-    let args = {};
-    if (filter && Object.keys(filter).length > 0) {
-      args = {
-        filter: {},
-      };
-      Object.entries(filter).forEach(([key, value]) => {
-        args.filter[key] = {_expressions: [{value}]}
+  constructor(model = {}) {
+    this.client = new AEMHeadless(API_CONFIG);
+    const isPaginated = model.config && model.config.pageSize;
+    if (isPaginated) {
+      this.paginated = this.client.runPaginatedQuery(model.name, model.fields, model.config, {
+        sort: "scheduledAt"
       });
     }
-    
-    if (_path) {
-      args._path = _path;
-    }
-    
-    const { query, type } = this.client.buildQuery(model.name, model.fields, {
-      useLimitOffset: true
-    }, args);
-    const { data, error } = await this.runQuery(query, variables);
-    const list = data?.[`${model.name}${type}`];
-    return { data: list?.items || list?.item, error };
   }
   
-  async runQuery(query, variables = {}) {
-    let body;
-    if (typeof query === 'string') {
-      body = {
-        query,
-        variables
-      }
-    } else {
-      body = {
-        query: query.query,
-        variables: query.variables ? { ...query.variables, ...variables } : variables
+  // ByPath
+  async fetchByPath(_path) {
+    const { item } = MODELS;
+
+    try {
+      const { data } = await this.client.runModelQuery(item.name, item.fields, {}, { _path });
+      return { data };
+    } catch (e) {
+      return {
+        error: e.toJSON()
       }
     }
-    
+  }
+  // Persisted
+  async fetchCached({ model, variables }) {
     try {
-      const response = await this.client.runQuery(body);
+      const { data } = await this.client.runPersistedQuery(model.path, variables);
       return {
-        data: response.data
+        data: data[`${model.name}List`].items
       };
     } catch (e) {
       return {
         error: e.toJSON()
+      }
+    }
+  }
+  // List
+  async fetchList(query, variables) {
+    try {
+      //
+      const { data } = await this.client.runQuery({ query, variables });
+      return {
+        data: data.sessionsList.items
+      };
+    } catch (e) {
+      return {
+        error: e.toJSON()
+      }
+    }
+  }
+  // Paginated
+  async fetchPaginated() {
+    try {
+      const { value = {} } = await this.paginated.next();
+      return {
+        data: value.data,
+        hasNext: value.hasNext,
+      };
+    } catch (e) {
+      return {
+        error: e
       }
     }
   }

@@ -1,24 +1,10 @@
-.teaser-list ul {
-    margin: 0;
-    padding: 0;
+/* --- Tab Content --- */
+.schedule .tab-content h4 {
+    margin-top: 0;
 }
 
-.teaser-list li {
-    list-style: none;
-}
-
-.teaser-list__items {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*flex-wrap: wrap;*/
-    /*width: 100%;*/
-    /*justify-content: space-between;*/
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-}
-
-.teaser-list__item {
-    /*flex: 25%;*/
+.schedule .tab-content {
+    position: relative;
+    padding: 1em 1em 2em;
+    border: 2px solid var(--color-light-gray);
 }

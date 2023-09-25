@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="absconditus-bos-cruciamentum-spiculum-averto-sponte-verbera-terminatio_9668f7ca-7d87-42c3-a125-6e4395dddd47"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Absconditus bos cruciamentum spiculum averto sponte verbera terminatio."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Deputo consequatur depereo tribuo aiunt quibusdam demitto tripudio derideo. Crur aequitas charisma defendo. Argentum condico veritatis virtus caritas canis virtus.
+Tepesco curis soleo rem. Vesper deleniti ipsa cognatus taedium benigne vespillo. Vicinus corpus unus coadunatio via venustas vos modi astrum amo.
+Apud summopere optio ut quia tepesco viscus verbum valeo. Quibusdam socius crustulum. Suspendo odit cupressus degusto antepono bestia comburo spiritus."
+                description_x0040_ContentType="text/html"
+                name="Absconditus bos cruciamentum spiculum averto sponte verbera terminatio."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T09:05:00.000Z"
+                size="{Long}93"
+                speaker="Frankie Rice"
+                techAudience="intermediate"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

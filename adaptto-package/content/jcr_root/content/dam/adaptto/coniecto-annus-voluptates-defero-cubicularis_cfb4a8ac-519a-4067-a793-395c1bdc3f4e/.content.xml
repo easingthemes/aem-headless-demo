@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="coniecto-annus-voluptates-defero-cubicularis_cfb4a8ac-519a-4067-a793-395c1bdc3f4e"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Coniecto annus voluptates defero cubicularis."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Assentator solium succurro. Solium depulso vestigium combibo aliquid triduana pel coerceo. Tendo contigo censura voluptatum ratione depereo verumtamen tracto.
+Subiungo demonstro candidus celebrer cunae. Balbus pectus adhaero adfero. Adhuc pecus optio vetus tot spiritus.
+Volo ancilla defungo verbera vulnus solio. Comes similique curto amitto caterva cribro. Adsidue vir vilitas ventus angulus."
+                description_x0040_ContentType="text/html"
+                name="Coniecto annus voluptates defero cubicularis."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-26T12:45:00.000Z"
+                size="{Long}42"
+                speaker="Josephine Morissette"
+                techAudience="intermediate"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

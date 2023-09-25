@@ -1,41 +1,44 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { API } from '../../api/api';
-import { Loading } from '../Loading/Loading';
+import Loading from '../Loading/Loading';
 
-function DataLoader({ action, variables, model, _path, filter, children }) {
-  const api = useMemo(() => new API(), []);
+function DataLoader({ model, _path, variables, children }) {
+  const api = useMemo(() => new API(model), [model]);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+  const [hasMore, setHasMore] = useState(null);
   
   useEffect(() => {
-    const apiAction = model ? 'fetchItemsForModel' : action;
-    
-    if (!apiAction) {
-      setError(new Error('API action missing!'));
-      return;
-    }
-    
-    if (typeof api[apiAction] !== 'function') {
-      setError(new Error('API action is not defined!'));
-      return;
-    }
-    
-    if (_path === null) {
-      setData({});
-      return;
-    }
+    let isMounted = true;
+    const isPaginated = model?.config?.pageSize;
     
     (async () => {
-      const { data, error } = await api[apiAction]({ model, _path, filter, variables });
+      if (!isMounted) {
+        return;
+      }
+      let result;
+      if (model?.path) {
+        result = await api.fetchCached({ model })
+      } else if (isPaginated) {
+        result = await api.fetchPaginated()
+      } else {
+        result = await api.fetchList(model, variables);
+      }
+
+      const { data, error, hasNext } = result;
       if (error) {
         setError(error);
       }
-      
       if (data) {
         setData(data);
       }
+      setHasMore(hasNext);
     })();
-  }, [api, action, variables, model, _path, filter]);
+    
+    return () => {
+      isMounted = false
+    }
+  }, [api, model, _path, variables]);
   
   if (error) {
     return <div>Error { error.message }</div>;
@@ -45,9 +48,24 @@ function DataLoader({ action, variables, model, _path, filter, children }) {
     return <Loading label="results"/>;
   }
   
+  const loadMore = () => {
+    api.fetchPaginated()
+      .then(({ data: moreData, error, hasNext }) => {
+        if (data) {
+          setData([...(data || []), ...moreData]);
+        }
+        if (error) {
+          setError(error);
+        }
+        setHasMore(hasNext);
+      });
+  }
+  
   return React.Children.map(children, (child) => {
     return React.cloneElement(child, {
       data,
+      hasMore,
+      loadMore
     });
   });
 }

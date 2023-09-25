@@ -16,6 +16,36 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #00a0ee;
+  text-decoration: none;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.load-more {
+  color: #fff;
+  background: #000;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1em 2.5em;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+button:not([disabled]):hover {
+  opacity: 0.7;
+}
+
+button[disabled] {
+  background-color: #ddd;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;

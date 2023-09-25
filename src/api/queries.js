@@ -1,88 +1,47 @@
 export const MODELS = {
-  adventure: {
-    name: 'adventure',
+  filters: {
+    name: 'sessions',
+    path: 'adaptTo/filter-by-day'
+  },
+  items: {
+    name: 'sessions',
     fields: `{
-      title
-      activity
+      scheduledAt
+      name
+      speaker
       _path
-      primaryImage {
-        ... on ImageRef {
-          _path
-        }
-      }
     }`
   },
-  article: {
-    name: 'adventure',
+  item: {
+    name: 'sessions',
     fields: `{
-      title
+      name
       description {
         html
       }
-      itinerary {
-        html
-      }
-      primaryImage {
-        ... on ImageRef {
-          _path
-        }
-      }
+      scheduledAt
+      speaker
+      _path
     }`
-  }
-}
-
-export const adventureList = {
-  query:   `query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
-    adventureList(
-      offset: $offset
-      limit: $limit
-      sort: $sort
-      _assetTransform: {
-        format: $imageFormat
-        width: $imageWidth
-        quality: $imageQuality
-        preferWebp: true
-    }) {
+  },
+  query: `query ($before: Calendar, $after: Calendar) {
+    sessionsList(
+      sort: "scheduledAt"
+      filter: {
+        scheduledAt: {
+          _expressions: [
+            {value: $before, _operator: BEFORE}
+            {value: $after, _operator: AFTER}
+          ]
+        }
+      }
+    ) {
       items {
+        scheduledAt
+        name
+        speaker
         _path
-        slug
-        title
-        activity
-        price
-        tripLength
-        primaryImage {
-          ... on ImageRef {
-            _path
-            _dynamicUrl
-          }
-        }
       }
     }
-  }`,
-  variables: {
-    imageWidth: 400
-  }
-};
-
-export const itemByPath = `
-  query getItemByPath($itemPath: String!) {
-    adventureByPath(_path: $itemPath) {
-      item {
-        title
-        slug
-        description {
-          html
-        }
-        activity
-        primaryImage {
-          ... on ImageRef {
-            _path
-          }
-        }
-        itinerary {
-          html
-        }
-      }
-    }
-  }
-`;
+  }`
+}

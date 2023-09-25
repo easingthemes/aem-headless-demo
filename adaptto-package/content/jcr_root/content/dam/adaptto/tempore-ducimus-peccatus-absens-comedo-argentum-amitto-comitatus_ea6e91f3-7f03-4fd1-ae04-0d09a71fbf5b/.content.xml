@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="tempore-ducimus-peccatus-absens-comedo-argentum-amitto-comitatus_ea6e91f3-7f03-4fd1-ae04-0d09a71fbf5b"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Tempore ducimus peccatus absens comedo argentum amitto comitatus."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Aperiam complectus amplitudo defaeco desparatus a contego vulpes solitudo. Summisse caput curtus carbo attero quas viduo tepesco. Candidus convoco sortitus."
+                description_x0040_ContentType="text/html"
+                name="Tempore ducimus peccatus absens comedo argentum amitto comitatus."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-26T07:45:00.000Z"
+                size="{Long}62"
+                speaker="Adam O'Connell"
+                techAudience="beginner"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

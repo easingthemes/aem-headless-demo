@@ -1,6 +1,7 @@
+import { API_CONFIG } from '../../api/config';
 import './Article.css';
 
-function Article({ data, closeArticle }) {
+function Article({ data, closeArticle, params }) {
   if (!data) {
     return (
       <div className="article">
@@ -22,7 +23,7 @@ function Article({ data, closeArticle }) {
     <div className="article">
       <div className="article__content">
         <button className="close" onClick={() => closeArticle()}><span className="visually-hidden">close</span></button>
-        <img src={`http://localhost:4502${data.primaryImage._path}`} alt={data.title}/>
+        <img src={`${API_CONFIG.serviceURL}${data.primaryImage._path}`} alt={data.title}/>
         <h2>{data.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: data.description.html }}></div>
         <hr/>

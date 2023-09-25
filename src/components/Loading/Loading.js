@@ -1,6 +1,6 @@
 import './Loading.css';
 
-export function Loading({ label }) {
+function Loading({ label }) {
   const renderLabel = () => {
     if (!label) {
       return null;
@@ -20,3 +20,5 @@ export function Loading({ label }) {
     </div>
   );
 }
+
+export default Loading;

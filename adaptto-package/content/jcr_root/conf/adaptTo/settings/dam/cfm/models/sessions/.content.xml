@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Template"
+    allowedPaths="[/content/entities(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:isDelivered="{Boolean}false"
+        cq:scaffolding="/conf/adaptTo/settings/dam/cfm/models/sessions/jcr:content/model"
+        cq:templateType="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:description="Adobe Developer Conf 2023 sessions"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sessions"
+        sling:resourceSuperType="dam/cfm/models/console/components/data/entity"
+        sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+        isLocked="{Boolean}true"
+        status="enabled">
+        <metadata jcr:primaryType="nt:unstructured"/>
+        <model
+            cq:targetPath="/content/entities"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="wcm/scaffolding/components/scaffolding"
+            dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
+            maxGeneratedOrder="20">
+            <cq:dialog
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        maxGeneratedOrder="20">
+                        <_x0031_695068874482
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Name"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="name"
+                            renderReadOnly="false"
+                            required="on"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_695068874482>
+                        <_x0031_695372771706
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Speaker"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="speaker"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_695372771706>
+                        <_x0031_695068912499
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/admin/components/authoring/contenteditor/multieditor"
+                            cfm-element="Description"
+                            checked="false"
+                            default-mime-type="text/html"
+                            listOrder="2"
+                            metaType="text-multi"
+                            name="description"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/multiline"/>
+                        <_x0031_695068942760
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            listOrder="4"
+                            metaType="boolean"
+                            name="onStage"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            text="On Stage"
+                            valueType="boolean">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_695068942760>
+                        <_x0031_695068986348
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/datatypes/datepicker"
+                            displayedFormat="YYYY-MM-DD HH:mm"
+                            emptyText="YYYY-MM-DD HH:mm:ss"
+                            fieldLabel="Scheduled At"
+                            listOrder="5"
+                            metaType="date"
+                            name="scheduledAt"
+                            renderReadOnly="false"
+                            required="on"
+                            showEmptyInReadOnly="true"
+                            type="datetime"
+                            valueFormat="YYYY-MM-DD[T]HH:mm:ss.000Z"
+                            valueType="calendar/datetime">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                typeHint="Date"/>
+                        </_x0031_695068986348>
+                        <_x0031_695069011426
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldLabel="Size"
+                            listOrder="3"
+                            metaType="number"
+                            name="size"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            step="1"
+                            typeHint="long"
+                            validation="cfm.validation.number.interval"
+                            valueType="long">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                number-max="100"
+                                number-min="20"/>
+                        </_x0031_695069011426>
+                        <_x0031_695069078838
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Technical Audience"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="techAudience"
+                            renderReadOnly="false"
+                            required="on"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Beginner"
+                                    fieldValue="beginner"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Intermediate"
+                                    fieldValue="intermediate"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Advanced"
+                                    fieldValue="advanced"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_695069078838>
+                        <_x0031_695069143294
+                            cq:showOnCreate="true"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                            autocreateTag="true"
+                            fieldLabel="Tags"
+                            forceSelection="false"
+                            listOrder="7"
+                            metaType="tags"
+                            multiple="true"
+                            name="tags"
+                            renderReadOnly="false"
+                            rootPath="/content/cq:tags"
+                            showEmptyInReadOnly="true"
+                            valueType="string/tags[]"/>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+        <change-register jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

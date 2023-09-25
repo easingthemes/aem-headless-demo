@@ -1,0 +1,10 @@
+{
+  sessionsList(
+    sort: "scheduledAt"
+    limit: 1000
+  ) {
+    items {
+      scheduledAt
+    }
+  }
+}
