@@ -13,13 +13,11 @@
   ],
   "filter.excluded.paths":[
     "/libs/dam/gui/content/assets/assetlinkshare",
-    "/content/communities/scorm/RecordResults",
     "/graphql",
     "/libs/dam/cfm/headless/endpoints/content/graphql",
     "/content/_cq_graphql/adaptTo/endpoint.json"
   ],
   "filter.methods":[
-    "POST",
     "PUT",
     "DELETE"
   ],
