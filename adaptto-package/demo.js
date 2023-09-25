@@ -107,7 +107,7 @@ const allDays = days.map((day, i) => {
 allDays[0].unshift(opening);
 const items = allDays.flat();
 
-const distDir = './demo-package/jcr_root/content/dam/adaptto';
+const distDir = './content/jcr_root/content/dam/adaptto';
 
 for (const item of items) {
   const tmplFilePath = join(__dirname, './tmpl/.content.xml');

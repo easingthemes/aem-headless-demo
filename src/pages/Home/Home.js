@@ -21,7 +21,7 @@ function Home() {
     itemsModel = {
       ...MODELS.items,
       config: {
-        pageSize: 4
+        pageSize: 9
       }
     };
   } else {

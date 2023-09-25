@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="labore-conitor-summa-quod-venustas-aequus-civis-nesciunt_67b85ee5-d568-4a03-a477-df4750172112"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Labore conitor summa quod venustas aequus civis nesciunt."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Careo astrum tubineus beneficium vilitas antiquus. Summa cattus cum demens subseco comes tersus expedita dedico adhuc. Qui assentator valens catena adsidue anser."
+                description_x0040_ContentType="text/html"
+                name="Labore conitor summa quod venustas aequus civis nesciunt."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-26T12:05:00.000Z"
+                size="{Long}90"
+                speaker="Traci Franecki-Hudson"
+                techAudience="beginner"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

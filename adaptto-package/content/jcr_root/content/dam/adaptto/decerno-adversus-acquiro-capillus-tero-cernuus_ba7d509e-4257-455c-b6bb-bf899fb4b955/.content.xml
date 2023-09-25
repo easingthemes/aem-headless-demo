@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="decerno-adversus-acquiro-capillus-tero-cernuus_ba7d509e-4257-455c-b6bb-bf899fb4b955"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Decerno adversus acquiro capillus tero cernuus."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Incidunt cilicium baiulus aperiam solium clibanus curo atrocitas sono. Expedita commemoro accendo."
+                description_x0040_ContentType="text/html"
+                name="Decerno adversus acquiro capillus tero cernuus."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T10:20:00.000Z"
+                size="{Long}53"
+                speaker="Amber Kemmer-Gusikowski"
+                techAudience="beginner"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

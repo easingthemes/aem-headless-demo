@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="videlicet-aiunt-tutis-tabernus-balbus-candidus_b1ea510f-4230-467a-822e-3af620be899a"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Videlicet aiunt tutis tabernus balbus candidus."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Brevis decretum quidem solum ager decretum tui sumo. Defluo consectetur atavus quas soleo tondeo eligendi comedo contabesco benevolentia."
+                description_x0040_ContentType="text/html"
+                name="Videlicet aiunt tutis tabernus balbus candidus."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-26T11:10:00.000Z"
+                size="{Long}39"
+                speaker="Wallace Cronin"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

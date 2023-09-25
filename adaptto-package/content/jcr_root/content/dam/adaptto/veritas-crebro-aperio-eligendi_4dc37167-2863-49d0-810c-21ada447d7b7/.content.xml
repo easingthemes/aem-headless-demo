@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="veritas-crebro-aperio-eligendi_4dc37167-2863-49d0-810c-21ada447d7b7"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Veritas crebro aperio eligendi."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Viridis desipio conor surculus sono suppellex angelus speculum. Solium cupressus vehemens defleo allatus solutio delectatio armarium sollers. Sollicito collum delectatio catena.
+Tendo voluptate hic ara sufficio creptio peior sursum tantillus. Turba surgo carus surgo repellat spes colo cinis temptatio pecco. Paulatim accendo amet demonstro corpus nihil torqueo magnam.
+Acer catena voluntarius reiciendis depereo repellat cunabula molestias. Ceno textilis conor patior arcesso rerum complectus torqueo. Vulgivagus quas deputo cur agnosco cariosus voluptatum audeo degenero necessitatibus."
+                description_x0040_ContentType="text/html"
+                name="Veritas crebro aperio eligendi."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T14:00:00.000Z"
+                size="{Long}56"
+                speaker="Dr. Michelle Gerhold"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

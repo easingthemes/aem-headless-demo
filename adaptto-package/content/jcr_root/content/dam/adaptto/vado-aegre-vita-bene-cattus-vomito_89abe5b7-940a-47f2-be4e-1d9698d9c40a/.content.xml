@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="vado-aegre-vita-bene-cattus-vomito_89abe5b7-940a-47f2-be4e-1d9698d9c40a"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Vado aegre vita bene cattus vomito."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Vociferor compello vigor. Concido pax vulariter conitor tendo esse vinitor. Curatio cattus textilis caveo patrocinor sed et.
+Adiuvo demergo sollers viduo patruus aggredior utilis subseco triumphus creta. Turpis cernuus supra blanditiis tergeo. Turpis auditor iste voro derelinquo cura concedo.
+Creo curatio repellat iusto adinventitias veritatis cumque vulnus vitium. Teres utor ultio communis. Tametsi aedificium astrum conduco."
+                description_x0040_ContentType="text/html"
+                name="Vado aegre vita bene cattus vomito."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T14:45:00.000Z"
+                size="{Long}72"
+                speaker="Bryant Lebsack DVM"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

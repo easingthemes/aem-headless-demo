@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="quos-conforto-tui-eligendi-iste-pariatur-vicinus-repellendus_fb79f1fd-ec98-4bf4-9db7-6db47064217c"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Quos conforto tui eligendi iste pariatur vicinus repellendus."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Confero subiungo vel strenuus ager strenuus velociter.
+Natus casus cupiditate.
+Nihil uberrime solitudo solvo aiunt usque una comitatus amoveo."
+                description_x0040_ContentType="text/html"
+                name="Quos conforto tui eligendi iste pariatur vicinus repellendus."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-26T13:25:00.000Z"
+                size="{Long}70"
+                speaker="Florence Will"
+                techAudience="beginner"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

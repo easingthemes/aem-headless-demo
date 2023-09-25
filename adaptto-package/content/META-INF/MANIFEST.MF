@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: AdaptTo - AEM Headless Demo Content
+Content-Package-Id: my_packages:adaptto-aem-headless
+Content-Package-Roots: /conf/adaptTo,/content/dam/adaptto,/apps/adaptto/osgiconfig,/content/cq:graphql/adaptTo
+Content-Package-Type: content
+

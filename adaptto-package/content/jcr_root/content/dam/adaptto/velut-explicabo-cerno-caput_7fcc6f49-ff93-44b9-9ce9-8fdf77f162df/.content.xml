@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="velut-explicabo-cerno-caput_7fcc6f49-ff93-44b9-9ce9-8fdf77f162df"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Velut explicabo cerno caput."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Dens comparo avaritia sollicito decipio compello deporto adsidue. Arca colo celo spiritus. Vinco placeat combibo bellum delectatio corrigo aliqua.
+Adopto causa summopere quibusdam vita cimentarius. Ascisco auditor valeo vomer utroque succedo sperno appello nobis. Canonicus vere tricesimus.
+Adipiscor crepusculum annus triduana. Ante supplanto deinde theologus ut ullus synagoga. Defessus tamdiu desparatus adficio."
+                description_x0040_ContentType="text/html"
+                name="Velut explicabo cerno caput."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T11:35:00.000Z"
+                size="{Long}92"
+                speaker="Garrett Kutch III"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

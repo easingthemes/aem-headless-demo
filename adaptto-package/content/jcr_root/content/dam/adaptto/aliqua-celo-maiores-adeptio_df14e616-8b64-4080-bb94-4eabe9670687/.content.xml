@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="aliqua-celo-maiores-adeptio_df14e616-8b64-4080-bb94-4eabe9670687"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Aliqua celo maiores adeptio."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Aestas dignissimos cubitum totidem. Spiritus stips laborum desipio officia auditor ater arguo. Corpus amplitudo expedita decumbo cerno aeneus."
+                description_x0040_ContentType="text/html"
+                name="Aliqua celo maiores adeptio."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T09:30:00.000Z"
+                size="{Long}73"
+                speaker="Angelo Davis"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

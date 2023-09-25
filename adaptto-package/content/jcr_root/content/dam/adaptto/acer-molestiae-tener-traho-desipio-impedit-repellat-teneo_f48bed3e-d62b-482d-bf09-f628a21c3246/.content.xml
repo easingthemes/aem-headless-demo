@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="acer-molestiae-tener-traho-desipio-impedit-repellat-teneo_f48bed3e-d62b-482d-bf09-f628a21c3246"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Acer molestiae tener traho desipio impedit repellat teneo."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Venia aqua spargo tredecim. Infit aeneus alienus. Antiquus aestivus ademptio advenio adulescens antiquus esse placeat suppellex dedico."
+                description_x0040_ContentType="text/html"
+                name="Acer molestiae tener traho desipio impedit repellat teneo."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T12:45:00.000Z"
+                size="{Long}53"
+                speaker="Bennie Boyle"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

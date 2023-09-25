@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="artificiose-cariosus-absens-vomer-aliqua-accusamus-usque-sollicito_41bf6107-7267-4cc7-af82-9954d8e55824"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Artificiose cariosus absens vomer aliqua accusamus usque sollicito."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Cotidie aro appello quas copia terga.
+Una concido thema voluptatem vereor.
+Bardus terror timidus."
+                description_x0040_ContentType="text/html"
+                name="Artificiose cariosus absens vomer aliqua accusamus usque sollicito."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T15:20:00.000Z"
+                size="{Long}77"
+                speaker="Christina Roberts"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

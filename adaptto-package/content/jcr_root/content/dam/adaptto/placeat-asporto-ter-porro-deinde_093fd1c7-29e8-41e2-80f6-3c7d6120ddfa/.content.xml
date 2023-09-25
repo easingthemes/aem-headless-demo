@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="placeat-asporto-ter-porro-deinde_093fd1c7-29e8-41e2-80f6-3c7d6120ddfa"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Placeat asporto ter porro deinde."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Stipes corpus earum curvo tamquam.
+Conturbo universe carmen theca hic tabella veniam eius.
+Timor centum conqueror claustrum animadverto.
+Perspiciatis iure conforto peior decumbo calamitas vel assumenda animi aro.
+Sponte bonus curiositas teneo ducimus carbo acies."
+                description_x0040_ContentType="text/html"
+                name="Placeat asporto ter porro deinde."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T12:25:00.000Z"
+                size="{Long}92"
+                speaker="Lorena Rowe-Wilderman"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="absens-collum-amaritudo-dolorem-tempus-tantum_cedcf363-c920-4fca-a72b-1afd4ccc3912"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Absens collum amaritudo dolorem tempus tantum."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Commodi undique animus pectus vulgivagus. Arceo baiulus titulus tum sonitus quos celebrer aro ambitus. Decor thalassinus quod.
+Anser versus curis. Defessus voluptatem villa valens aro comminor uterque crepusculum. Creator curto demo eveniet curvo cohibeo tabernus texo defaeco.
+Clarus arceo tumultus coma est. Accusamus cura appello. Nesciunt conqueror peior celer utrum absque amet."
+                description_x0040_ContentType="text/html"
+                name="Absens collum amaritudo dolorem tempus tantum."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T07:00:00.000Z"
+                size="{Long}41"
+                speaker="Della Nienow"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

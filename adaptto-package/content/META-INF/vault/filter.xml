@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/adaptTo"/>
+    <filter root="/content/dam/adaptto"/>
+    <filter root="/content/cq:graphql/adaptTo"/>
+    <filter root="/apps/adaptto"/>
+</workspaceFilter>

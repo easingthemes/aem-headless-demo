@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="atavus-suffoco-aequitas-vociferor-vesco-canis-arbitro_186b52ed-c60c-4082-b09b-93e864aaed79"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Atavus suffoco aequitas vociferor vesco canis arbitro."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Provident suscipio pecus temporibus tutis ambitus."
+                description_x0040_ContentType="text/html"
+                name="Atavus suffoco aequitas vociferor vesco canis arbitro."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T08:55:00.000Z"
+                size="{Long}68"
+                speaker="Gabriel Cassin"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

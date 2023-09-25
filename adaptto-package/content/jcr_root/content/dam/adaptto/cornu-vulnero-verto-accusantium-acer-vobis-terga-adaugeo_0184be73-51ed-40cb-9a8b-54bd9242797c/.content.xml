@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="cornu-vulnero-verto-accusantium-acer-vobis-terga-adaugeo_0184be73-51ed-40cb-9a8b-54bd9242797c"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Cornu vulnero verto accusantium acer vobis terga adaugeo."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Advoco deserunt similique admoneo commodo assumenda confero. Tamen atqui cupio advenio animi suffragium degenero. Via beatus cena utrum suspendo qui."
+                description_x0040_ContentType="text/html"
+                name="Cornu vulnero verto accusantium acer vobis terga adaugeo."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T11:55:00.000Z"
+                size="{Long}46"
+                speaker="Alma Goodwin"
+                techAudience="intermediate"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

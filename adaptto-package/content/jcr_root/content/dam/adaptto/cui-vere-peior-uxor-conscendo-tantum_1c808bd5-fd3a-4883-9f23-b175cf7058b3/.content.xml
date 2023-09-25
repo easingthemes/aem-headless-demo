@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="cui-vere-peior-uxor-conscendo-tantum_1c808bd5-fd3a-4883-9f23-b175cf7058b3"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Cui vere peior uxor conscendo tantum."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Tamen surculus sed despecto arbor calamitas subnecto utroque. Damno veniam concedo arbustum ater. Victus porro attollo."
+                description_x0040_ContentType="text/html"
+                name="Cui vere peior uxor conscendo tantum."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-27T11:10:00.000Z"
+                size="{Long}72"
+                speaker="Fannie Powlowski"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

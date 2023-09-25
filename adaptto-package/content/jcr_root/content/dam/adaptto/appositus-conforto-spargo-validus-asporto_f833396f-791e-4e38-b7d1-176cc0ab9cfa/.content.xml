@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="appositus-conforto-spargo-validus-asporto_f833396f-791e-4e38-b7d1-176cc0ab9cfa"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Appositus conforto spargo validus asporto."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Amiculum cado patria utroque caries. Decimus desparatus depromo recusandae auctor celebrer tredecim attollo. Supellex verumtamen dapifer. Quis maiores villa basium odio ago cupiditas subiungo arcus torrens. Auctor contigo cetera debitis terror timidus validus vere volubilis. Umerus caute infit debilito usus."
+                description_x0040_ContentType="text/html"
+                name="Appositus conforto spargo validus asporto."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-25T08:20:00.000Z"
+                size="{Long}43"
+                speaker="Barbara Schaefer II"
+                techAudience="advanced"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="dam:Asset"
+    >
+    <jcr:content
+        cq:name="amo-artificiose-tersus-a-solus-utilis_32e33925-3710-4c04-b896-3f5f255a61bb"
+        cq:parentPath="/content/dam/adaptto"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Amo artificiose tersus a solus utilis."
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/adaptTo/settings/dam/cfm/models/sessions"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:primaryType="nt:unstructured"
+                description="Truculenter amicitia tamisium damnatio. Convoco sollicito temptatio. Cenaculum thermae amoveo somnus annus clamo."
+                description_x0040_ContentType="text/html"
+                name="Amo artificiose tersus a solus utilis."
+                onStage="{Boolean}true"
+                scheduledAt="{Date}2023-09-26T09:05:00.000Z"
+                size="{Long}93"
+                speaker="Rachel Green"
+                techAudience="beginner"/>
+        </data>
+        <metadata
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
